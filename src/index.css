@@ -9,11 +9,14 @@
   --color-surface: #001208;
   --color-surface-elevated: #151e1a;
   --color-gold: #f9c31f;
-  --color-purple: #8c47d1;
+  --color-purple: #6b1df8;
+  --color-blue: #1c192e;
+  --color-blue-2: #121726;
 
   --color-primary: #01a74b;
   --color-primary-foreground: #09150f;
   --color-primary-glow: #33ff99;
+  --color-primary-inverted: #002e14;
 
   --color-secondary: #1d2a24;
   --color-secondary-foreground: #ffffff;
@@ -23,6 +26,8 @@
 
   --color-card: #001208;
   --color-card-foreground: #ffffff;
+
+  --color-bouncy-text: #8f4216;
 
   --color-sidebar: #0a100d;
   --color-sidebar-foreground: #c7d1cc;
@@ -34,6 +39,7 @@
   --radius-sm: 0.375rem;
 
   --font-display: "Inter", sans-serif;
+  --font-irish: "Irish Grover", cursive;
 }
 
 @layer base {
@@ -81,7 +87,7 @@
       /* #1d2a24 50%, */ #003b1f 100%
     );
     --gradient-bird: linear-gradient(135deg, #d7eaea 0%, #b8e0e0 100%);
-    --gradient-card: linear-gradient(160deg, #00a155 0%, #003b1f 100%);
+    --gradient-card: linear-gradient(135deg, #00a155 0%, #003b1f 100%);
     --gradient-purple: linear-gradient(135deg, #8c47d1 0%, #6a3bbf 100%);
 
     /* Shadows / glows */
@@ -155,7 +161,22 @@
 }
 
 @utility gradient-card {
-  background: linear-gradient(160deg, #141f1a 0%, #0f1512 100%);
+  background: linear-gradient(270deg, #4d5a53 0%, #182920 100%);
+}
+
+@utility gradient-social-banner {
+  background: radial-gradient(
+    51.61% 51.5% at 42.5% 6.75%,
+    #00a155 0%,
+    #003b1f 100%
+  );
+}
+
+@utility bg-bouncy-banner {
+  background-image: url("./assets/bouncy-bird-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @utility gradient-purple {

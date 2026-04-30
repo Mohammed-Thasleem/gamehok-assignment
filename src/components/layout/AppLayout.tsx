@@ -11,7 +11,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
       <div className="flex-1 flex flex-col min-w-0">
         <TopBar />
         <MobileTopBar />
-        <main className="flex-1 pb-24 lg:pb-8">{children}</main>
+        <main className="flex-1">{children}</main>
       </div>
       <MobileBottomNav />
     </div>

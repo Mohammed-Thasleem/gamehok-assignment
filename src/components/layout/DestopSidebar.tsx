@@ -1,7 +1,7 @@
-import { LogOut } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { navItems } from "../../config/navigation";
 import gamehokLogo from "@/assets/gamehok-logo.svg";
+import logoutIcon from "@/assets/icon-logout.svg";
 
 export const DesktopSidebar = () => {
   return (
@@ -15,27 +15,42 @@ export const DesktopSidebar = () => {
       </div>
 
       <nav className="flex flex-col gap-1 flex-1">
-        {navItems.map(({ to, label, icon: Icon, end }) => (
-          <NavLink
-            key={to}
-            to={to}
-            end={end}
-            className={({ isActive }) =>
-              `flex items-center gap-3 px-3 py-2.5 rounded-lg text-[16px] transition-all duration-300 ${
-                isActive
-                  ? "bg-sidebar-accent text-foreground font-semibold glow-soft"
-                  : "text-sidebar-foreground hover:bg-sidebar-accent/60 hover:text-foreground"
-              }`
-            }
-          >
-            <Icon className="size-6" />
-            {label}
-          </NavLink>
-        ))}
+        {navItems.map((item) => {
+          const Icon = item.icon;
+          if (item.disabled) {
+            return (
+              <div
+                key={item.label}
+                className="flex items-center gap-3 px-3 py-2.5 rounded-sm text-[16px] text-sidebar-foreground hover:bg-sidebar-accent hover:text-foreground cursor-pointer transition-all duration-300"
+              >
+                <Icon className="size-6" />
+                {item.label}
+              </div>
+            );
+          }
+
+          return (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.end}
+              className={({ isActive }) =>
+                `flex items-center gap-3 px-3 py-2.5 rounded-sm text-[16px] transition-all duration-300 ${
+                  isActive
+                    ? "gradient-card text-foreground font-semibold"
+                    : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-foreground"
+                }`
+              }
+            >
+              <Icon className="size-6" />
+              {item.label}
+            </NavLink>
+          );
+        })}
       </nav>
 
-      <button className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-destructive hover:bg-sidebar-accent transition-colors">
-        <LogOut className="size-4" />
+      <button className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors">
+        <img src={logoutIcon} alt="Logout" className="size-4 object-contain" />
         Logout
       </button>
     </aside>

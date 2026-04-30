@@ -5,4 +5,5 @@ export interface NavItem {
   label: string;
   icon: LucideIcon;
   end?: boolean;
+  disabled?: boolean;
 }
