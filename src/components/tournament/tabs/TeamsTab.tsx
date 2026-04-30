@@ -6,7 +6,7 @@ interface TeamsTabProps {
 
 export const TeamsTab = ({ tournament }: TeamsTabProps) => {
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 py-3">
       {tournament.teams.map((team) => (
         <div
           key={team.id}

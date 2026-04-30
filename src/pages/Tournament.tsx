@@ -14,7 +14,6 @@ import { TournamentTabs } from "@/components/tournament/TournamentTab";
 
 const Tournament = () => {
   const { id } = useParams();
-  // const navigate = useNavigate();
   const loading = useMountLoading(900);
   const [activeTab, setActiveTab] = useState<TournamentTabKey>("overview");
   const [round, setRound] = useState(1);
@@ -50,17 +49,16 @@ const Tournament = () => {
       {loading ? (
         <TournamentSkeleton />
       ) : (
-        <div className="px-4 py-3 pb-32 lg:px-8 lg:py-4">
+        <div className="px-8 py-6 pb-[10rem] lg:pb-[5rem] lg:px-8 lg:py-4">
           <TournamentHero tournament={tournament} activeTab={activeTab} />
           <TournamentTabs activeTab={activeTab} onChange={setActiveTab} />
-
-          <div className="mt-5">{renderTabContent()}</div>
+          <div className="">{renderTabContent()}</div>
         </div>
       )}
 
-      <div className="fixed bottom-16 inset-x-0 z-30 px-4 lg:bottom-6 lg:left-60 lg:px-8">
+      <div className="fixed bottom-14  bg-black py-6 inset-x-0 z-30 px-4 lg:bottom-0 lg:left-60 lg:px-8 shadow-[0px_-2px_4px_0px_#FFFFFF40]">
         <div className="mx-auto flex max-w-7xl lg:justify-end">
-          <button className="w-full rounded-xl bg-primary py-3.5 text-sm font-bold tracking-wide text-primary-foreground lg:w-auto lg:px-10">
+          <button className="w-full rounded-xl bg-primary py-2 text-sm font-bold tracking-wide text-primary-foreground lg:w-auto lg:px-10">
             JOIN TOURNAMENT
           </button>
         </div>

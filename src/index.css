@@ -180,7 +180,7 @@
 }
 
 @utility gradient-purple {
-  background: linear-gradient(135deg, #59248f 0%, #4a1c70 100%);
+  background: linear-gradient(270deg, #311a61 0%, #1c192e 100%);
 }
 
 @utility scrollbar-hide {

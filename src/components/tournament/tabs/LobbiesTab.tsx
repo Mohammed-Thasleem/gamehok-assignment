@@ -17,7 +17,7 @@ export const LobbiesTab = ({
   );
 
   return (
-    <div>
+    <div className="py-3">
       <div className="mb-4 flex gap-2">
         {[1, 2, 3].map((roundNumber) => (
           <button
@@ -34,7 +34,7 @@ export const LobbiesTab = ({
         ))}
       </div>
 
-      <div className="grid gap-3 lg:grid-cols-2">
+      <div className="grid gap-3 gap-x-15 lg:grid-cols-2">
         {filteredLobbies.map((lobby) => (
           <LobbyCard key={lobby.id} {...lobby} />
         ))}

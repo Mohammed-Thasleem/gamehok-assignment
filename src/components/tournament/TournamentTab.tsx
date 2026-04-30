@@ -17,7 +17,7 @@ export const TournamentTabs = ({
   onChange,
 }: TournamentTabsProps) => {
   return (
-    <div className="mt-5 flex overflow-x-auto rounded-xl border border-border bg-surface p-1 scrollbar-hide">
+    <div className="mt-4 flex overflow-x-auto border-b-2 border-b-gray bg-surface py-1 scrollbar-hide">
       {TABS.map(({ key, label }) => {
         const isActive = activeTab === key;
 
@@ -25,15 +25,15 @@ export const TournamentTabs = ({
           <button
             key={key}
             onClick={() => onChange(key)}
-            className={`relative min-w-[90px] flex-1 rounded-lg px-3 py-2 text-xs font-semibold transition-colors lg:text-sm ${
+            className={`relative min-w-[90px] max-w-[136px] min-h-[42px] flex-1  px-3 py-2 text-xs font-semibold transition-colors lg:text-sm ${
               isActive
-                ? "text-primary"
+                ? "text-primary bg-primary-inverted/50 rounded-t-md "
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
             {label}
             <span
-              className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-primary transition-transform duration-300 ${
+              className={`w-full absolute bottom-[-3px] left-0 right-0 h-0.5 rounded-full bg-primary transition-transform duration-300 ${
                 isActive ? "scale-x-100" : "scale-x-0"
               }`}
             />
