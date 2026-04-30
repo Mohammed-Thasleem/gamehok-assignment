@@ -1,5 +1,5 @@
 import { Calendar, Clock, Medal, Users2 } from "lucide-react";
-import type { Tournament } from "@/types/tournament";
+import type { Tournament } from "@/components/tournament/tournament.types";
 import { DetailItem } from "./DetailItem";
 
 interface TournamentDetailsProps {

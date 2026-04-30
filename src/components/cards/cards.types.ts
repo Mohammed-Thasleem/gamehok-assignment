@@ -4,7 +4,7 @@ import type {
   Battle,
   Highlight,
   TournamentLobby,
-} from "./tournament";
+} from "../tournament/tournament.types";
 
 export type TournamentCardProps = Tournament;
 export type GameCardProps = Game;

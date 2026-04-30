@@ -1,5 +1,5 @@
 import { LobbyCard } from "@/components/cards/LobbyCard";
-import type { Tournament } from "@/types/tournament";
+import type { Tournament } from "@/components/tournament/tournament.types";
 
 interface LobbiesTabProps {
   tournament: Tournament;

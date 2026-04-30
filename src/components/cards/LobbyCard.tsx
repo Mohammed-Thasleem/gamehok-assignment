@@ -1,5 +1,5 @@
-import { Clock } from 'lucide-react';
-import type { LobbyCardProps } from '@/types/cards';
+import { Clock } from "lucide-react";
+import type { LobbyCardProps } from "@/components/cards/cards.types";
 
 export const LobbyCard = ({ name, status }: LobbyCardProps) => {
   return (

@@ -1,7 +1,7 @@
 import { ArrowLeft, Clock, Share2 } from "lucide-react";
 import gsIcon from "@/assets/gs.png";
 import { useNavigate } from "react-router-dom";
-import type { Tournament } from "@/types/tournament";
+import type { Tournament } from "@/components/tournament/tournament.types";
 import { StatusPill } from "../common/StatusPill";
 
 interface TournamentHeroProps {

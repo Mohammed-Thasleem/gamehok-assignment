@@ -1,5 +1,5 @@
 import { MoreTournaments } from "../MoreTournaments";
-import type { Tournament } from "@/types/tournament";
+import type { Tournament } from "@/components/tournament/tournament.types";
 import { TournamentDetails } from "../overview/TournamentDetails";
 import { TournamentRounds } from "../overview/TournamentRounds";
 import { HowToJoin } from "../overview/HowToJoin";

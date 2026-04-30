@@ -1,4 +1,4 @@
-import type { TournamentTabKey } from "@/types/tabs";
+import type { TournamentTabKey } from "@/components/tournament/tabs/tabs.types";
 
 const TABS: { key: TournamentTabKey; label: string }[] = [
   { key: "overview", label: "Overview" },

@@ -1,4 +1,4 @@
-import type { Tournament } from "@/types/tournament";
+import type { Tournament } from "@/components/tournament/tournament.types";
 
 interface TeamsTabProps {
   tournament: Tournament;

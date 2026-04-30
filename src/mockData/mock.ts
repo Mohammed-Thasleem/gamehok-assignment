@@ -18,7 +18,7 @@ import type {
   Game,
   Highlight,
   User,
-} from "@/types/tournament";
+} from "@/components/tournament/tournament.types";
 
 export const games: Game[] = [
   { id: "bgmi", name: "BGMI", image: gameBgmi },

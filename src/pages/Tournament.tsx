@@ -8,7 +8,7 @@ import { RulesTab } from "@/components/tournament/tabs/RulesTab";
 import { LobbiesTab } from "@/components/tournament/tabs/LobbiesTab";
 import { TeamsTab } from "@/components/tournament/tabs/TeamsTab";
 import { OverviewTab } from "@/components/tournament/tabs/OverviewTab";
-import type { TournamentTabKey } from "@/types/tabs";
+import type { TournamentTabKey } from "@/components/tournament/tabs/tabs.types";
 import { TournamentHero } from "@/components/tournament/TournamentHero";
 import { TournamentTabs } from "@/components/tournament/TournamentTab";
 

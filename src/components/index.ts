@@ -35,7 +35,7 @@ import type {
   Game,
   Highlight,
   User,
-} from "@/types/tournament";
+} from "@/components/tournament/tournament.types";
 
 // ─── Primitive builders ──────────────────────────────────────────────────────
 
@@ -45,7 +45,9 @@ const seq = () => String(++_seq);
 
 // ─── Sub-entity factories ────────────────────────────────────────────────────
 
-export const makeRound = (overrides: Partial<TournamentRound> = {}): TournamentRound => ({
+export const makeRound = (
+  overrides: Partial<TournamentRound> = {},
+): TournamentRound => ({
   name: "Qualifiers",
   round: `Round ${seq()}`,
   format: "Single Elimination",
@@ -54,20 +56,26 @@ export const makeRound = (overrides: Partial<TournamentRound> = {}): TournamentR
   ...overrides,
 });
 
-export const makePrize = (overrides: Partial<TournamentPrize> = {}): TournamentPrize => ({
+export const makePrize = (
+  overrides: Partial<TournamentPrize> = {},
+): TournamentPrize => ({
   place: "1st Prize",
   amount: 1000,
   ...overrides,
 });
 
-export const makeTeam = (overrides: Partial<TournamentTeam> = {}): TournamentTeam => ({
+export const makeTeam = (
+  overrides: Partial<TournamentTeam> = {},
+): TournamentTeam => ({
   id: `team-${seq()}`,
   name: `Squad ${seq()}`,
   members: 4,
   ...overrides,
 });
 
-export const makeLobby = (overrides: Partial<TournamentLobby> = {}): TournamentLobby => ({
+export const makeLobby = (
+  overrides: Partial<TournamentLobby> = {},
+): TournamentLobby => ({
   id: `lobby-${seq()}`,
   name: `Lobby ${seq()}`,
   status: "Yet to be scheduled",
@@ -76,7 +84,7 @@ export const makeLobby = (overrides: Partial<TournamentLobby> = {}): TournamentL
 });
 
 export const makeLeaderboard = (
-  overrides: Partial<TournamentLeaderboard> = {}
+  overrides: Partial<TournamentLeaderboard> = {},
 ): TournamentLeaderboard => ({
   rank: 1,
   name: "Player One",
@@ -85,7 +93,7 @@ export const makeLeaderboard = (
 });
 
 export const makeParticipant = (
-  overrides: Partial<TournamentParticipant> = {}
+  overrides: Partial<TournamentParticipant> = {},
 ): TournamentParticipant => ({
   id: `participant-${seq()}`,
   name: "Test Player",
@@ -95,7 +103,9 @@ export const makeParticipant = (
 
 // ─── Primary entity factories ────────────────────────────────────────────────
 
-export const makeTournament = (overrides: Partial<Tournament> = {}): Tournament => ({
+export const makeTournament = (
+  overrides: Partial<Tournament> = {},
+): Tournament => ({
   id: `tournament-${seq()}`,
   title: "Test Tournament",
   organiser: "Test Org",
@@ -150,11 +160,12 @@ export const makeBattle = (overrides: Partial<Battle> = {}): Battle => ({
   name: "GS Daily Scrims",
   by: "By GS Esports",
   description: "Play daily scrims and sharpen your skills",
-  color: "purple",
   ...overrides,
 });
 
-export const makeHighlight = (overrides: Partial<Highlight> = {}): Highlight => ({
+export const makeHighlight = (
+  overrides: Partial<Highlight> = {},
+): Highlight => ({
   id: `highlight-${seq()}`,
   title: "Test Highlight",
   image: "highlight-cod.png",
@@ -173,7 +184,12 @@ export const makeUser = (overrides: Partial<User> = {}): User => ({
 
 /** A tournament that is fully booked */
 export const fullTournament = (overrides: Partial<Tournament> = {}) =>
-  makeTournament({ registered: 800, capacity: 800, status: "Full", ...overrides });
+  makeTournament({
+    registered: 800,
+    capacity: 800,
+    status: "Full",
+    ...overrides,
+  });
 
 /** A tournament that has ended */
 export const completedTournament = (overrides: Partial<Tournament> = {}) =>
@@ -194,5 +210,5 @@ export const noLobbiesTournament = (overrides: Partial<Tournament> = {}) =>
 /** Multiple lobbies across 3 rounds */
 export const multiRoundLobbies = () =>
   Array.from({ length: 9 }, (_, i) =>
-    makeLobby({ round: (i % 3) + 1, name: `Lobby ${i + 1}` })
+    makeLobby({ round: (i % 3) + 1, name: `Lobby ${i + 1}` }),
   );

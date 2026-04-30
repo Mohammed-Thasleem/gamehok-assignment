@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import type { Tournament } from "@/types/tournament";
+import type { Tournament } from "@/components/tournament/tournament.types";
 
 interface OrganiserCardProps {
   tournament: Tournament;

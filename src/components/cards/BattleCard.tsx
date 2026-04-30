@@ -1,5 +1,5 @@
 import { ChevronRight } from "lucide-react";
-import type { BattleCardProps } from "@/types/cards";
+import type { BattleCardProps } from "@/components/cards/cards.types";
 
 export const BattleCard = ({
   badge,

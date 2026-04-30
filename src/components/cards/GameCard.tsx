@@ -1,4 +1,4 @@
-import type { GameCardProps } from "@/types/cards";
+import type { GameCardProps } from "@/components/cards/cards.types";
 
 export const GameCard = ({ name, image }: GameCardProps) => {
   return (

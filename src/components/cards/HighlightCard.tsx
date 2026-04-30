@@ -1,5 +1,5 @@
 import { Play } from "lucide-react";
-import type { HighlightCardProps } from "@/types/cards";
+import type { HighlightCardProps } from "@/components/cards/cards.types";
 
 export const HighlightCard = ({ title, image, video }: HighlightCardProps) => {
   return (

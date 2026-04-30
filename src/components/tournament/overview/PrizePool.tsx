@@ -1,4 +1,4 @@
-import type { Tournament } from "@/types/tournament";
+import type { Tournament } from "@/components/tournament/tournament.types";
 import coinIcon from "@/assets/coins.png";
 
 interface PrizePoolProps {

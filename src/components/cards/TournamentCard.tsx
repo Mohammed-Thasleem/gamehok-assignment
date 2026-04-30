@@ -3,7 +3,7 @@ import { StatusPill } from "@/components/common/StatusPill";
 import { Trophy } from "lucide-react";
 import coinIcon from "@/assets/coins.png";
 import gsLogo from "@/assets/gs.png";
-import type { TournamentCardProps } from "@/types/cards";
+import type { TournamentCardProps } from "@/components/cards/cards.types";
 
 export const TournamentCard = ({
   id,
